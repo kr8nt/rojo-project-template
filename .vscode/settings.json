@@ -1,0 +1,33 @@
+{
+  "luau-lsp.platform.type": "roblox",
+  "luau-lsp.sourcemap.enabled": true,
+  "luau-lsp.sourcemap.autogenerate": true,
+  "luau-lsp.sourcemap.rojoProjectFile": "default.project.json",
+  "luau-lsp.sourcemap.sourcemapFile": "sourcemap.json",
+  "luau-lsp.diagnostics.strictDatamodelTypes": false,
+
+  "luau-lsp.ignoreGlobs": [
+    "**/Packages/**",
+    "**/ServerPackages/**",
+    "**/_Index/**",
+    "**/build/**"
+  ],
+
+  "[lua]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua",
+    "editor.formatOnSave": true
+  },
+  "[luau]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua",
+    "editor.formatOnSave": true
+  },
+
+  "files.watcherExclude": {
+    "**/_Index/**": true,
+    "**/Packages/**": true
+  },
+  "files.exclude": {
+    "**/_Index/**": false,
+    "**/Packages/**": false
+  }
+}

@@ -1,0 +1,5 @@
+Packages/**
+ServerPackages/**
+**/_Index/**
+build/**
+sourcemap.json
