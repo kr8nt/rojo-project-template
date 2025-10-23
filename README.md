@@ -3,9 +3,18 @@ This template contains pre-configured rokit, selene, stylua and wally, to clone 
 
 ## Setup
 1. Clone the repo
-2. Install rokit (Linux: ```curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash```)
-3. Install pre-configured tools with rokit (```rokit install```)
-4. Initialize Rojo (```rojo init```)
+2. Install rokit on Linux
+ ```
+ curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash
+ ```
+4. Install pre-configured tools with rokit
+```
+rokit install
+```
+6. Initialize Rojo
+```
+rojo init
+```
 
 That's it, now you can start working on your awesome project!
 
