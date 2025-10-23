@@ -37,7 +37,7 @@ rojo sourcemap --watch default.project.json --output sourcemap.json
 6. selene - Linter
 7. luau-lsp - Language server
 
-##Useful commands
+## Useful commands
 - Build Rojo game file (```rojo build --output=build/game.rbxlx```)
 - Load env variables (```set -a; source .env; set +a```)
 - Publish game to Roblox (```rbxcloud experience publish --filename build/game.rbxlx --place-id $PLACE_ID --universe-id $UNIVERSE_ID --version-type published```)
