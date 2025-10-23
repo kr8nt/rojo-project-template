@@ -1,7 +1,7 @@
 {
   "luau-lsp.platform.type": "roblox",
   "luau-lsp.sourcemap.enabled": true,
-  "luau-lsp.sourcemap.autogenerate": true,
+  "luau-lsp.sourcemap.autogenerate": false,
   "luau-lsp.sourcemap.rojoProjectFile": "default.project.json",
   "luau-lsp.sourcemap.sourcemapFile": "sourcemap.json",
   "luau-lsp.diagnostics.strictDatamodelTypes": false,
@@ -29,5 +29,6 @@
   "files.exclude": {
     "**/_Index/**": false,
     "**/Packages/**": false
-  }
+  },
+  "stylua.disableVersionCheck": true
 }

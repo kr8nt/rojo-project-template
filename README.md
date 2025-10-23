@@ -1,36 +1,46 @@
-# roblox-game-template
-Template for a new Roblox game that uses Rokit as a toolchain manager, Rojo for file sync, Wally for package management and rbxcloud for publishing the game builds to Roblox.
+# rojo-project-template
+This template contains pre-configured rokit, selene, stylua and wally, to clone it and immediatelly start working on your new Rojo project.
 
 ## Setup
-This is a short list of steps that need to be done to get a new workspace ready for working on the game.
+1. Clone the repo
+2. Install rokit (Linux: ```curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash```)
+3. Install pre-configured tools with rokit (```rokit install```)
+4. Initialize Rojo (```rojo init```)
 
-### 1.) Install Rokit
-To install Rokit on Linux use this:
+That's it, now you can start working on your awesome project!
+
+## Publishing to Roblox using Open Cloud API
+If you don't have access to studio and still want to test the game, you can publish it to Roblox using Open Cloud API.
+
+To publish a game, you need an already created place on Roblox (through Roblox Studio).
+**Be aware, that publishing a game to Roblox will override everything you already had in that place!**
+
+Create a .env file in the root of the repo and add the following variables:
+1. PLACE_ID - The ID of the place
+2. UNIVERSE_ID - The ID of the experience
+3. RBXCLOUD_API_KEY - Your Roblox API key
+
+When publishing a game, load env variables and then run the publish command (command is below in Useful commands)
+
+## Luau Language Server
+If using the Luau Language Server extension, to make it work, open a new terminal and use this command:
 ```
-curl -sSf https://raw.githubusercontent.com/rojo-rbx/rokit/main/scripts/install.sh | bash
+rojo sourcemap --watch default.project.json --output sourcemap.json
 ```
 
-### 2.) Install tools
-To install all of the pre-added tools (```rokit.toml```), use this:
-```
-rokit install
-```
+## List of tools
+1. Rokit - Toolchain manager
+2. Rojo - Build tool
+3. Wally - Package manager
+4. rbxcloud - CLI and library for Roblox Open Cloud API 
+5. StyLua - Code formatter
+6. selene - Linter
+7. luau-lsp - Language server
 
-## Useful commands
-- Building Rojo game file:
-```
-rojo build --output=build/game.rbxlx
-```
-
-- Publishing game build:
-```
-rbxcloud experience publish --filename build/game.rbxlx --place-id $PLACE_ID --universe-id $UNIVERSE_ID --version-type published
-```
-
-Don't forget to create .env and add PLACE_ID, UNIVERSE_ID, RBXCLOUD_API_KEY and then loading all of these env variables using:
-```
-set -a; source .env; set +a
-```
+##Useful commands
+- Build Rojo game file (```rojo build --output=build/game.rbxlx```)
+- Load env variables (```set -a; source .env; set +a```)
+- Publish game to Roblox (```rbxcloud experience publish --filename build/game.rbxlx --place-id $PLACE_ID --universe-id $UNIVERSE_ID --version-type published```)
 
 ## Useful Extensions
 To use all tools in this template, we also need to install these extensions:
