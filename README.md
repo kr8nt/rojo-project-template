@@ -47,9 +47,20 @@ rojo sourcemap --watch default.project.json --output sourcemap.json
 7. luau-lsp - Language server
 
 ## Useful commands
-- Build Rojo game file (```rojo build --output=build/game.rbxlx```)
-- Load env variables (```set -a; source .env; set +a```)
-- Publish game to Roblox (```rbxcloud experience publish --filename build/game.rbxlx --place-id $PLACE_ID --universe-id $UNIVERSE_ID --version-type published```)
+Build Rojo game file
+```
+rojo build --output=build/game.rbxlx
+```
+
+Load env variables
+```
+set -a; source .env; set +a
+```
+
+Publish game to Roblox
+```
+rbxcloud experience publish --filename build/game.rbxlx --place-id $PLACE_ID --universe-id $UNIVERSE_ID --version-type published
+```
 
 ## Useful Extensions
 To use all tools in this template, we also need to install these extensions:
@@ -57,3 +68,4 @@ To use all tools in this template, we also need to install these extensions:
 https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.stylua
 https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml
 https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.luau-lsp
+```
